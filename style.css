@@ -1,0 +1,124 @@
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #1c1e21;
+}
+
+/* Main Chat Container */
+#chat-container {
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #dddfe2;
+}
+
+/* Chat Box for Messages */
+#chat-box {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-bottom: 1px solid #dddfe2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Styling for individual messages */
+#chat-box p {
+    margin: 0;
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 75%;
+    line-height: 1.4;
+}
+
+/* User Message Styling */
+.user-message {
+    background-color: #0084ff;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+/* Assistant Message Styling */
+.assistant-message {
+    background-color: #e4e6eb;
+    color: #050505;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+/* Input Area */
+.input-area {
+    display: flex;
+    padding: 12px;
+    background-color: #fff;
+}
+
+#user-input {
+    flex-grow: 1;
+    border: 1px solid #ccd0d5;
+    border-radius: 20px;
+    padding: 10px 18px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#user-input:focus {
+    border-color: #0084ff;
+}
+
+/* Send Button */
+button {
+    background-color: #0084ff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0073e6;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+        background-color: #ffffff;
+    }
+
+    #chat-container {
+        height: 100vh;
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+    }
+
+    #chat-box {
+        padding: 15px;
+    }
+
+    .input-area {
+        padding: 10px;
+    }
+}
